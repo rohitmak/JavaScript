@@ -25,3 +25,6 @@ let someNumber = 33
 let stringNumber = String(someNumber)
 console.log(typeof stringNumber);
 console.log(stringNumber);
+
+let newString = stringNumber + 20
+console.log(newString)

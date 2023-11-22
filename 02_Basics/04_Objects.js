@@ -53,11 +53,57 @@ const users = [
 
 users[1].email; // this will access the email of 1st user in the database;
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); // this will print all the keys of tinderUser object; the main thing to observe here is that this will output the keys in an array format on which we can apply different operations and work just like arrays (loop, etc...)
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser)); // used very less, all the key value pairs are tabulated in an array [[key, value], ..., ...]
+// console.log(Object.keys(tinderUser)); // this will print all the keys of tinderUser object; the main thing to observe here is that this will output the keys in an array format on which we can apply different operations and work just like arrays (loop, etc...)
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser)); // used very less, all the key value pairs are tabulated in an array [[key, value], ..., ...]
 
 // console.log(tinderUser.hasOwnProperty('isInOpenAI')); // true since it is in the object tinderUser
 // console.log(tinderUser.hasOwnProperty('isInOpen')); // false since not ...
+
+// Object De-Structureing and JSON API
+
+const course = {
+  courseName: "JS in Hindi",
+  price: "999",
+  courseInstructor: "Rohit"
+}
+
+// Now to print the values of the above object we can write them seperately like ↓
+// course.courseInstructor; but there is a good way ↓
+
+// const {courseInstructor} = course; // now we can only use 'courseInstructor' to access this property
+const {courseInstructor: instructor} = course; // we can give value to the variable according to us.
+
+// console.log(courseInstructor);
+// console.log(instructor);
+
+// This is called object destructuring; i.e; how we destructure the object according to our need.
+
+// Now in react also we use this where instead of using 'props.company', etc we directly use {company} in the argument
+// const navbar = (props.company) => {
+
+// }
+// const navbar = ({company}) => {
+
+// }
+
+// navbar(company = "BuildON");
+
+// API (Application Programming Interface), getting our work done by other, eg: Restaurant Menu Card, Google Authentication
+// API is how we write the values coming from backend; initially the values were in XML structure but nowadays they are in JSON (JavaScript Object Notation)
+
+// JSON →
+// {
+//   "name": "rohit",
+//   "coursename": "JS in Hindi",
+//   "price": "Free"
+// }
+
+// JSON can be in the form
+// [
+//   {},
+//   {},
+//   {}
+// ]

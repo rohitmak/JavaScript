@@ -33,5 +33,5 @@ console.log(myNewArr1);
 console.log("B ", myArr);
 
 const myNewArr2 = myArr.splice(1, 3);
-console.log("C ", myArr);
 console.log(myNewArr2);
+console.log("C ", myArr);

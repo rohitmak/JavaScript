@@ -49,3 +49,34 @@ const balance = 1000;
 // if(balance > 500) console.log("test1"),
 // console.log("test2"); // This is the way of handling with implicit scope but it's highly unreadable hence avoided.
 
+// Sometimes we want to check on continuous conditions for that:
+
+// if(balance < 500) {
+//     console.log("Balance is less than 500");
+// }
+// else if(balance < 750) {
+//     console.log("Balance is less than 750");
+// }
+// else if(balance < 900) {
+//     console.log("Balance is less than 900");
+// }
+// else {
+//     console.log("Balance is less than 1200");
+// }
+
+// if to check multiple conditions
+
+const userLoggedIn = true;
+const debitCard = true;
+const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
+
+if(userLoggedIn && debitCard) { // both statement needs to be true for this loop to executed.
+    console.log("User is allowed to purchase the course!");
+}
+
+if(loggedInFromGoogle || loggedInFromEmail) {
+    console.log("User logged in.");
+}
+// will use this conditional rendering in upcoming development.
+

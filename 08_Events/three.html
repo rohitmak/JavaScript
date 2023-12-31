@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Projects with Async JS</title>
+  </head>
+  <body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+
+    // setInterval(sayDate, 1000);
+    // const intervalId = setInterval(sayDate, 1000, "Hi");
+
+    // clearInterval(intervalId);
+
+    // Assignment
+
+    let printInterval;
+
+    document.getElementById("start").addEventListener("click", function () {
+      printInterval = setInterval(function () {
+        console.log("Printing");
+      }, 1000);
+    });
+    document.getElementById("stop").addEventListener("click", function () {
+      clearInterval(printInterval);
+      console.log("stopped");
+    });
+  </script>
+</html>
